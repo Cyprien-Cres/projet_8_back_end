@@ -8,8 +8,13 @@ const usersRouter = require('./routes/users');
 const apiRouter = require('./routes/api');
 const authRouter = require('./routes/auth');
 const { initialize } = require('./db');
-
 const app = express();
+
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'http://localhost:3001',
+}));
 
 app.use(logger('dev'));
 app.use(express.json());
