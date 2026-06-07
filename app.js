@@ -13,7 +13,7 @@ const app = express();
 const cors = require('cors');
 
 app.use(cors({
-  origin: ['http://localhost:3001', 'https://projet-8-back-end.onrender.com'],
+  origin: ['http://localhost:3001', 'http://localhost:3000', 'https://projet-8-back-end.onrender.com'],
   credentials: true,
 }));
 
