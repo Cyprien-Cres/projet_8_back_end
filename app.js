@@ -13,7 +13,8 @@ const app = express();
 const cors = require('cors');
 
 app.use(cors({
-  origin: 'http://localhost:3001',
+  origin: ['http://localhost:3001', /\.vercel\.app$/],
+  credentials: true,
 }));
 
 app.use(logger('dev'));
